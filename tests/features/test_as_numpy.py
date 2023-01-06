@@ -1,7 +1,8 @@
+import os
 import pytest
 import numpy as np
+# import sys              # added in exercise 3.9
 from features.as_numpy import get_data_as_numpy_array
-import sys              # added in 3.9
 
 """ comments on 4.3 and test the part from import os
 class TestGetDataAsNumpyArray(object):
@@ -18,7 +19,7 @@ class TestGetDataAsNumpyArray(object):
         assert actual == pytest.approx(expected), message
 """
 
-import os
+
 
 @pytest.fixture
 def clean_data_file():

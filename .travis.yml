@@ -1,8 +1,11 @@
-# .travis.yml  
-language: python  
-python:  
-    - "3.9"  
-install:  
-    - pip install -e .  
-script:  
-    - pytest tests 
+# .travis.yml
+language: python
+python:
+    - "3.9"
+install:
+    - pip install -e .
+    - pip install pytest-cov codecov   # Install packages for code coverage report
+script:
+    - pytest -- cov=src tests          # Point to the source directory
+after_success:
+    - codecov                          # uploads report to codecov.io

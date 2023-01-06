@@ -5,7 +5,7 @@ python:
 install:
     - pip install -e .
     - pip install pytest-cov codecov   # Install packages for code coverage report
-#script:
-#    - pytest -- cov = src tests          # Point to the source directory
 after_success:
-    - codecov                          # uploads report to codecov.io
+    - curl -Os https://uploader.codecov.io/latest/linux/codecov
+    - chmod +x codecov
+    - ./codecov
